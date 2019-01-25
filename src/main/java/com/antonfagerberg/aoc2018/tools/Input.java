@@ -1,18 +1,15 @@
 package com.antonfagerberg.aoc2018.tools;
 
-import java.io.BufferedReader;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.util.Objects;
+import java.io.IOException;
+import java.net.URISyntaxException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.stream.Stream;
 
 public class Input {
 
-    public static Stream<String> get(String resource) {
-        InputStream inputStream = Input.class.getClassLoader().getResourceAsStream(resource);
-        InputStreamReader reader = new InputStreamReader(Objects.requireNonNull(inputStream));
-        BufferedReader bufferedReader = new BufferedReader(reader);
-        return bufferedReader.lines();
+    public static Stream<String> get(String resource) throws URISyntaxException, IOException {
+        return Files.lines(Paths.get(Input.class.getClassLoader().getResource(resource).toURI()));
     }
 
 }

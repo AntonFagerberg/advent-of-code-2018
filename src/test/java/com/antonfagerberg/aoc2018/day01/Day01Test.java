@@ -3,6 +3,12 @@ package com.antonfagerberg.aoc2018.day01;
 import com.antonfagerberg.aoc2018.tools.Input;
 import org.junit.Test;
 
+import java.io.IOException;
+import java.net.URISyntaxException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
 import static org.junit.Assert.assertEquals;
 
 public class Day01Test {
@@ -27,7 +33,7 @@ public class Day01Test {
 
 
     @Test
-    public void testPart01() {
+    public void testPart01() throws IOException, URISyntaxException {
         int[] input = Input.get("day01/input").mapToInt(Integer::parseInt).toArray();
         assertEquals("Day 1, Part 1", 510, Day01.part1(input));
     }
@@ -58,7 +64,7 @@ public class Day01Test {
 
 
     @Test
-    public void testPart02() {
+    public void testPart02() throws IOException, URISyntaxException {
         int[] input = Input.get("day01/input").mapToInt(Integer::parseInt).toArray();
         assertEquals("Day 1, Part 2", 69074, Day01.part2(input));
     }
