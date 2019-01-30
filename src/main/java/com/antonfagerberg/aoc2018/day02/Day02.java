@@ -1,7 +1,6 @@
 package com.antonfagerberg.aoc2018.day02;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
 
 public class Day02 {
@@ -60,8 +59,7 @@ public class Day02 {
             }
         }
 
-        //var result = branch(0, new HashMap<>() {{ put('?', new ArrayList<>(Arrays.asList(input))); }});
-        return null;
+        throw new IllegalStateException();
     }
 
     static ArrayList<String> branch(int index, HashMap<Character, ArrayList<String>> partitions) {
