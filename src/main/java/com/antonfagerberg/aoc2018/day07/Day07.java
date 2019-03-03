@@ -24,7 +24,6 @@ class Day07 {
         var available = edges.stream()
                 .filter(edge -> edges.stream().noneMatch(e -> e.getRight().equals(edge.getLeft())))
                 .map(Pair::getLeft)
-                .distinct()
                 .sorted()
                 .collect(Collectors.toCollection(TreeSet::new));
 
@@ -70,7 +69,6 @@ class Day07 {
         var available = edges.stream()
                 .filter(edge -> edges.stream().noneMatch(e -> e.getRight().equals(edge.getLeft())))
                 .map(Pair::getLeft)
-                .distinct()
                 .sorted()
                 .collect(Collectors.toCollection(TreeSet::new));
 
